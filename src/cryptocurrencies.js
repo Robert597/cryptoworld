@@ -42,12 +42,13 @@ if(!isFetching && !data){
         {isFetching && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
         {!isFetching && error && <div className=' font-poppins text-red-600 text-lg'>{errorMessage}</div>}
         {!isFetching && !error && <>
-    <div className='w-full sticky top-0 flex justify-center bigtablet:justify-end bg-text  p-4'>
+    <div className='w-full fixed top-20 flex justify-center bigtablet:justify-end bg-text  p-4'>
       <input type="text" placeholder="Search CryptoCurrency" onFocus={() => {
                         document.querySelector('.main').scrollTo(0, 0);
                     }} value={searchValue} onChange={(e) => handleChange(e)} className=" py-1 px-4 focus:outline-none placeholder:text-fade font-base font-poppins rounded focus:border-2 focus:border-text shadow"/>
     </div>
-    <div className = "grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full p-4">
+    <div className = "grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full p-4 mt-24">
+    <p className='text-base text-fade font-poppins capitalize '>click on any coin for more details...</p>
       {
           filteredCrypto?.map((crypto) => (
             <Link to = {`/cryptocurrencies/${crypto.rank}`}  key={crypto.rank}>

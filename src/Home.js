@@ -47,7 +47,7 @@ const Home = () => {
         <h1 className='font-poppins text-base bigtablet:text-2xl font-bold'>Top 10 Cryptocurrencies in the world</h1>
         <Link to="/cryptocurrencies" className='font-poppins text-base bigtablet:text-xl font-bold text-text'>Show More</Link>
     </div>
-    <div className='w-full'>
+    <div className='w-full mb-4'>
    <HomeCrypto/>
    </div>
     <div  className='flex justify-between py-2'>

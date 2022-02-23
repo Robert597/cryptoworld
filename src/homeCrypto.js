@@ -11,6 +11,7 @@ const HomeCrypto = () => {
   
   return (
     <div className = "grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full py-2 midtablet:py-4">
+       <p className='text-base text-fade font-poppins capitalize'>click on any coin for more details...</p>
       {
           cryptos?.map((crypto) => (
             <Link to = {`/cryptocurrencies/${crypto.rank}`}  key={crypto.rank}>

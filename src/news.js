@@ -18,7 +18,7 @@ const News = () => {
   return (
     <div>
       
-    <div className='w-full sticky top-0 flex justify-end bg-text  p-4'>
+    <div className='w-full fixed top-20 flex justify-end bg-text  p-4'>
       {isFetchin ? <p className='font-poppins text-lg text-green-600'>Loading...</p> :
     <select name="news" id="news" onChange={(e) => setNewsCategory(e.target.value)} className=" py-1 px-4 focus:outline-none placeholder:text-fade font-base font-poppins rounded focus:border-2 focus:border-text shadow">
     <option value="cryptocurrency">cryptocurrency</option>
@@ -31,7 +31,8 @@ const News = () => {
     {isFetching && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
     {error && <div className=' font-poppins text-red-600 text-lg'>{errorMessage}</div>}
         {!isFetching && !error && <>
-      <div className='newsContainer grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full p-4'>
+      <div className='newsContainer grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full p-4 mt-24'>
+      <p className='text-base text-fade font-poppins capitalize'>click on any news for more details...</p>
         {news.value.map((newss, i) => (
           <div className='newsCardContainer  bg-white px-4 py-2 hover:shadow-xl' key={i}>
            <a href={newss.url} target='_blank' rel='noreferrer'>

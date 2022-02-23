@@ -11,7 +11,7 @@ const Main = () => {
     <img src={icon} alt="icon"/>
      </div>
      <div className='py-2'>
-       <h1 className='text-text font-poppins text-4xl font-bold'>CRYPTOWORLD</h1>
+       <h1 className='text-text font-poppins text-5xl font-bold'>CRYPTOWORLD</h1>
      </div>
      <div className='w-full bigtablet:w-1/2'>
      <p className=" text-center capitalize text-white font-poppins text-4xl font-bold mb-4">Track Your cryptocurrency news and data in realtime</p>

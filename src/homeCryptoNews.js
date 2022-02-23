@@ -10,6 +10,7 @@ const HomeCryptoNews = () => {
     <div>
     {isFetching ? <p>Loading...</p> : 
     <div className='newsContainer grid gap-4 grid-cols-1 midtablet:grid-cols-2 laptop:grid-cols-3 w-full py-2 midtablet:py-4'>
+       <p className='text-base text-fade font-poppins capitalize'>click on any news for more details...</p>
       {news.value.map((newss, i) => (
         <div className='newsCardContainer  bg-white px-4 py-2 hover:shadow-xl' key={i}>
          <a href={newss.url} target='_blank' rel='noreferrer'>
