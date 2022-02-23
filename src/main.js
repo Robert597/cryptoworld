@@ -6,9 +6,9 @@ import icon from "./crypto.png";
 
 const Main = () => {
   return (
-    <div className='w-screen min-h-full mainscreen flex flex-col items-center py-8 bigtablet:py-2'>
+    <div className='w-screen min-h-screen mainscreen flex flex-col items-center py-8 bigtablet:py-2'>
      <div className='py-2 bigtablet:py-0'>
-    <img src={icon} alt="icon" className='w-full h-full'/>
+    <img src={icon} alt="icon"/>
      </div>
      <div className='py-2'>
        <h1 className='text-text font-poppins text-4xl font-bold'>CRYPTOWORLD</h1>

@@ -31,7 +31,7 @@ const CoinDetails = () => {
         },
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-          'x-rapidapi-key': 'de083142b9mshcc371426a94e1c5p15a326jsnf32378236d15'
+          'x-rapidapi-key': process.env.REACT_APP_CRYPTO_API_KEY
         }
       }
      
@@ -51,7 +51,7 @@ const CoinDetails = () => {
                         params: {referenceCurrencyUuid: 'yhjMzLPhuIDl', timePeriod: '24h'},
                         headers: {
                           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-                          'x-rapidapi-key': 'de083142b9mshcc371426a94e1c5p15a326jsnf32378236d15'
+                          'x-rapidapi-key': process.env.REACT_APP_CRYPTO_API_KEY
                         }
                       };
                       const response = await axios.request(options);
@@ -111,7 +111,7 @@ const CoinDetails = () => {
     { title: 'Total Supply', value: `$ ${cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)}`, icon: <ExclamationCircleOutlined /> },
     { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ]; 
-  const time = ['1d', '2d', '3d', "7d", "14d", '30d', '60d', '70d', '80d', '90d'];
+  const time = ['24h', ''];
   return (
      <div className=" px-4 bigtablet:px-12 py-4 bigtablet:py-8">
           {isLoading && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}

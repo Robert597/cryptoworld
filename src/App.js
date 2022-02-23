@@ -22,7 +22,7 @@ function App() {
   }, [location.pathname]);
   
   return (
-    <div className= "App relative w-screen bg-body min-h-screen bigtablet:h-screen bigtablet:flex">
+    <div className= {match? "min-h-screen" : "App relative w-screen bg-body min-h-screen bigtablet:h-screen bigtablet:flex"}>
     <Routes>
     <Route exact path = "/" element={ <Main/> }></Route>
     </Routes>
@@ -46,7 +46,7 @@ function App() {
         <Route exact path = "/cryptocurrencies/:id" element={ <CoinDetails/> }></Route>
         </Routes>
       </div>
-      <div className="footer bg-nav py-4 flex justify-center">
+      <div className="footer bg-nav py-8 flex items-center justify-center h-full">
         <div className="footerContent">
           <p className="text-center text-white font-poppins text-sm bigtablet:text-base">Cryptoworld &copy;Robert Oluwaseun Jonathan, All Rights Reserved.</p>
         </div>
